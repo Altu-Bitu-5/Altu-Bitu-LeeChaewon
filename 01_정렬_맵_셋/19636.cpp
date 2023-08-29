@@ -15,25 +15,33 @@ int main() {
 
     // 기초대사량 변화 무시
     w1 = w0 + d * (i - (i0 + a));
-    if (w1 <= 0)
+    if (w1 <= 0) {
+
         cout << "Danger Diet\n";
-    else
+    } else {
         cout << w1 << " " << i0 << "\n";
+    }
 
     // 기초대사량 변화 고려
-    for (int j = 0; j < d; j++) {
+    while (d--) {
         w2 += (i - (i1 + a));
-        if (abs(i - (i1 + a)) > t)
+        if (abs(i - (i1 + a)) > t) {
             i1 += floor((i - (i1 + a)) / 2);
+        }
     }
-    if (w2 <= 0 || i1 <= 0)
+    if (w2 <= 0 || i1 <= 0) {
         cout << "Danger Diet\n";
+    }
+
     else {
         cout << w2 << " " << i1 << " ";
-        if ((i0 - i1) > 0)
+        if ((i0 - i1) > 0) {
             cout << "YOYO";
-        else
+        }
+
+        else {
             cout << "NO";
+        }
     }
     return 0;
 }
