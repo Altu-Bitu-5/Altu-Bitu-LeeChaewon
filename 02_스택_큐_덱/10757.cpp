@@ -13,8 +13,9 @@ int main() {
     // vector 동적 할당 크기 구하기
     int len = max(a.length(), b.length());
 
-    vector<int> total(len +
-                      1); // 각 자리수의 합 저장 벡터 선언 (+1은 제일 큰 자리수 올림 위해)
+    vector<int> total(
+        len +
+        1); // 각 자리수의 합 저장 벡터 선언 (+1은 제일 큰 자리수 올림 위해)
 
     // 각 자리수 덧셈
     for (int i = 0; i < a.length(); i++) {
